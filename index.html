@@ -65,51 +65,74 @@
     @media(max-width:760px){
   html,body{width:100%;max-width:100%}
   .wrap,.block-inner{width:calc(100% - 40px)}
-  .topbar{position:absolute;top:8px;left:0;right:0;height:auto;min-height:0;padding:0 12px;background:transparent;justify-content:flex-end}
-  .nav{width:100%;max-width:100%;flex-wrap:nowrap;justify-content:flex-end;gap:6px;font-size:clamp(8px,2.25vw,10px)}
-  .nav a,.nav a.book,.nav a.services,.nav a.contact{flex:0 1 auto;min-width:0;min-height:40px;height:auto;padding:7px clamp(6px,2vw,10px);font-size:inherit;letter-spacing:.015em;line-height:1.2;text-align:center;white-space:normal;overflow-wrap:anywhere}
-  .block{min-height:max(100svh,650px);padding:82px 0 38px}
-  .block h1{font-size:clamp(40px,11vw,60px);line-height:.98}
-  .block h2{font-size:clamp(34px,8.6vw,48px);line-height:1}
-  .block p{font-size:16px;line-height:1.6}
-  .service-grid{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:18px;min-height:calc(100svh - 120px)}
+  .topbar{position:absolute;top:10px;left:0;right:0;height:auto;min-height:0;padding:0 12px;background:transparent;justify-content:flex-end}
+  .nav{width:100%;max-width:100%;flex-wrap:nowrap;justify-content:flex-end;gap:4px;font-size:clamp(7px,2.2vw,9px)}
+  .nav a,.nav a.book,.nav a.services,.nav a.contact{flex:0 1 auto;min-width:0;min-height:36px;height:auto;padding:6px clamp(5px,1.7vw,8px);font-size:inherit;letter-spacing:.01em;line-height:1.15;text-align:center;white-space:nowrap}
+  .block{min-height:max(100svh,700px);padding:74px 0 30px;border-bottom:0}
+  .block h1{font-size:clamp(36px,10vw,44px);line-height:.98}
+  .block h2{font-size:clamp(34px,8.8vw,40px);line-height:1}
+  .block p{font-size:15px;line-height:1.52}
+  .service-grid{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:16px;min-height:calc(100svh - 104px)}
   .service-art{display:none}
   .service-copy{width:100%;max-width:none;order:1}
-  .button{max-width:100%;min-height:48px;padding:14px 16px;gap:12px;line-height:1.4;white-space:normal;overflow-wrap:anywhere}
-  .number{right:20px;bottom:18px}
+  .button{max-width:100%;min-height:46px;padding:12px 15px;gap:10px;line-height:1.35;white-space:normal;overflow-wrap:anywhere}
+  .number{display:none}
   footer{gap:14px;flex-wrap:wrap;padding:22px 0;font-size:9px}
-  #vika{isolation:isolate;min-height:100svh;padding:94px 0 18px;background-color:#273746;background-image:none}#vika:before{content:'';position:absolute;top:calc(clamp(360px,50svh,430px) - 32px);right:0;bottom:0;left:0;z-index:1;background:url('images/vika-hero-wide.png') left bottom/auto 180svh no-repeat;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 32px);mask-image:linear-gradient(to bottom,transparent 0,#000 32px);pointer-events:none}#vika:after{content:'';position:absolute;inset:0;z-index:0;background-image:url('images/vika-hero-wide.png');background-position:94% top;background-size:auto clamp(360px,50svh,430px);background-repeat:no-repeat;pointer-events:none}
-  #vika .vika-grid{position:relative;z-index:2;min-height:calc(100svh - 112px);align-self:stretch;align-items:flex-end;margin:0}
-  #vika .vika-copy{width:calc(100% - 40px);max-width:500px;margin:0 auto;padding:0;text-align:left;transform:translateY(-73px)}
-  #vika .vika-copy .kicker{font-size:clamp(8.5px,2.4vw,10px);line-height:1.4;letter-spacing:.04em}
-  #vika .vika-copy h1{max-width:100%;font-size:clamp(23px,6.1vw,26px);line-height:1.04;margin:9px 0 0;overflow-wrap:anywhere}#vika .vika-copy p{font-size:clamp(11.5px,3vw,12.8px);line-height:1.5;margin-top:9px}
-  .ride{min-height:max(100svh,650px);padding:70px 0 38px;background-color:#15364a;background-image:linear-gradient(0deg,rgba(13,32,45,.78) 0%,rgba(13,32,45,.56) 48%,rgba(13,32,45,.18) 100%),linear-gradient(90deg,rgba(13,32,45,.12),rgba(13,32,45,.42)),url('images/moto-rides-background.png');background-position:center,center,28% center;background-size:100% 100%,100% 100%,cover;background-repeat:no-repeat}
-  .ride:before{inset:0;background:linear-gradient(180deg,rgba(21,54,74,.14),transparent 36%,rgba(13,32,45,.28) 100%)}
-  .ride:after{height:58px;background:linear-gradient(180deg,transparent,rgba(21,54,74,.24))}
-  .ride .service-grid{min-height:calc(100svh - 108px);align-items:flex-start;justify-content:center;padding:0}
-  .ride .service-copy{width:88%;max-width:520px;margin:0 0 0 auto;text-align:left}
-  .ride .service-copy>.kicker{margin-left:0;justify-content:flex-start;font-size:clamp(11px,3vw,13px);line-height:1.4}
-  .ride .service-copy h2{font-size:clamp(30px,7.4vw,38px);line-height:1.04;margin:10px 0 12px;overflow-wrap:anywhere}
-  .ride .service-copy p{max-width:52ch;font-size:clamp(15px,3.9vw,16px);font-weight:600;line-height:1.58;margin:0 0 8px;overflow-wrap:anywhere}
-  .ride .button{margin-top:12px}
-  #photo{min-height:max(100svh,650px);padding:70px 0 38px;background-color:#15364a;background-image:linear-gradient(0deg,rgba(9,26,38,.82) 0%,rgba(9,26,38,.56) 48%,rgba(9,26,38,.16) 100%),linear-gradient(90deg,rgba(9,26,38,.44),rgba(9,26,38,.08)),url('images/moto-session-wide.png');background-position:center,center,right center;background-size:100% 100%,100% 100%,cover;background-repeat:no-repeat}
-  #photo:before{inset:0;background:linear-gradient(180deg,rgba(21,54,74,.2),transparent 34%,rgba(21,54,74,.28) 100%)}
-  #photo:after{height:58px;background:linear-gradient(180deg,transparent,rgba(21,54,74,.24))}
-  #photo .service-grid{min-height:calc(100svh - 108px);align-items:flex-start;justify-content:center;padding:0}
-  #photo .service-copy{width:86%;max-width:520px;margin:0 auto 0 0;text-align:left}
-  #photo .service-copy>.kicker{font-size:clamp(11px,3vw,13px);line-height:1.4}
-  #photo .service-copy h2{font-size:clamp(32px,7.8vw,40px);line-height:1.04;margin:10px 0 12px;overflow-wrap:anywhere}
-  #photo .service-copy p{max-width:52ch;font-size:clamp(15px,3.9vw,16px);line-height:1.58;margin:0 0 8px;overflow-wrap:anywhere}
-  #photo .button{margin-top:12px}
-  #sup{min-height:max(100svh,650px);padding:70px 0 38px;background-color:#153850;background-image:linear-gradient(0deg,rgba(21,56,80,.84) 0%,rgba(21,56,80,.6) 50%,rgba(21,56,80,.16) 100%),linear-gradient(90deg,rgba(21,56,80,.08),rgba(21,56,80,.42)),url('images/sup-background.png');background-position:center,center,left center;background-size:100% 100%,100% 100%,cover;background-repeat:no-repeat}
-  #sup:before{inset:0;background:linear-gradient(180deg,rgba(21,54,74,.16),transparent 36%,rgba(21,56,80,.3) 100%);filter:none;opacity:1}
-  #sup:after{inset:0;height:auto;background-image:linear-gradient(90deg,transparent 22%,rgba(21,56,80,.18) 100%);background-position:center;background-size:100% 100%;background-repeat:no-repeat}
-  #sup .service-grid{min-height:calc(100svh - 108px);align-items:flex-start;justify-content:center}
-  #sup .service-copy{width:86%;max-width:520px;margin:0 0 0 auto;transform:none;text-align:right}
-  #sup .service-copy>.kicker{justify-content:flex-end;font-size:clamp(11px,3vw,13px);line-height:1.4}
-  #sup .service-copy h2{font-size:clamp(32px,7.8vw,40px);line-height:1.04;margin:10px 0 12px;overflow-wrap:anywhere}
-  #sup .service-copy p{max-width:52ch;font-size:clamp(15px,3.9vw,16px);font-weight:600;line-height:1.58;color:#e8d8bd;margin:0 0 8px;transform:none;text-align:right;overflow-wrap:anywhere}
-  #sup .button{margin-top:12px}
+
+  #vika{isolation:isolate;min-height:100svh;padding:0;background-color:#153850;background-image:linear-gradient(180deg,rgba(21,56,80,.84) 0%,rgba(21,56,80,.72) 25%,rgba(21,56,80,.44) 43%,rgba(21,56,80,.18) 60%,rgba(21,56,80,0) 76%),url('images/vika-moto.jpg');background-position:center,center bottom;background-size:100% 100%,auto 100svh;background-repeat:no-repeat;color:#f4eee4}
+  #vika:before,#vika:after{content:none}
+  #vika .vika-grid{position:relative;z-index:2;min-height:100svh;align-self:stretch;align-items:flex-start;margin:0;padding-top:clamp(130px,18svh,160px)}
+  #vika .vika-copy{width:calc(100% - 4px);max-width:500px;margin:0 auto;padding:0;text-align:left;transform:none}
+  #vika .vika-copy .kicker{font-size:clamp(10px,2.8vw,12px);line-height:1.4;letter-spacing:.08em}
+  #vika .vika-copy h1{max-width:100%;font-size:clamp(38px,10vw,46px);line-height:.98;margin:12px 0 12px;overflow-wrap:anywhere}
+  #vika .vika-copy p{max-width:30ch;font-size:clamp(13px,3.7vw,15px);line-height:1.45;margin-top:0}
+
+  .ride{min-height:max(100svh,700px);padding:74px 0 30px;background-color:#153850;background-image:linear-gradient(180deg,rgba(13,32,45,.78) 0%,rgba(13,32,45,.55) 30%,rgba(13,32,45,.26) 58%,rgba(13,32,45,.2) 100%),url('images/moto-rides-background.png');background-position:center,24% bottom;background-size:100% 100%,auto clamp(520px,65svh,680px);background-repeat:no-repeat}
+  .ride:before{content:none}
+  .ride:after{height:52px;background:linear-gradient(180deg,transparent,#153850)}
+  .ride .service-grid{min-height:calc(100svh - 104px);align-items:flex-start;justify-content:flex-end;padding:0}
+  .ride .service-copy{width:90%;max-width:440px;margin:0 0 0 auto;text-align:right}
+  .ride .service-copy>.kicker{justify-content:flex-end;font-size:clamp(10px,2.8vw,12px);line-height:1.4}
+  .ride .service-copy h2{font-size:clamp(34px,8.8vw,40px);line-height:1.02;margin:10px 0 12px;overflow-wrap:anywhere}
+  .ride .service-copy p{max-width:38ch;font-size:clamp(14px,3.8vw,15.5px);font-weight:600;line-height:1.5;margin:0 0 8px;overflow-wrap:anywhere}
+  .ride .button{margin-top:10px}
+
+  #photo{min-height:max(100svh,700px);padding:74px 0 30px;background-color:#153850;background-image:linear-gradient(180deg,rgba(15,38,54,.78) 0%,rgba(15,38,54,.56) 28%,rgba(15,38,54,.24) 56%,rgba(15,38,54,.2) 100%),url('images/moto-session-wide.png');background-position:center,78% bottom;background-size:100% 100%,auto clamp(520px,65svh,680px);background-repeat:no-repeat}
+  #photo:before{content:none}
+  #photo:after{height:52px;background:linear-gradient(180deg,transparent,#153850)}
+  #photo .service-grid{min-height:calc(100svh - 104px);align-items:flex-start;justify-content:flex-start;padding:0}
+  #photo .service-copy{width:calc(100% - 4px);max-width:500px;margin:0 auto;text-align:left}
+  #photo .service-copy>.kicker{justify-content:flex-start;font-size:clamp(10px,2.8vw,12px);line-height:1.4}
+  #photo .service-copy h2{font-size:clamp(34px,8.8vw,40px);line-height:1.02;margin:10px 0 12px;overflow-wrap:anywhere}
+  #photo .service-copy p{max-width:38ch;font-size:clamp(14px,3.8vw,15.5px);line-height:1.5;margin:0 0 8px;overflow-wrap:anywhere}
+  #photo .button{margin-top:10px}
+
+  #sup{min-height:max(100svh,700px);padding:74px 0 30px;background-color:#153850;background-image:linear-gradient(180deg,rgba(232,216,189,.08) 0%,rgba(232,216,189,.04) 36%,rgba(21,56,80,.12) 68%,rgba(21,56,80,.22) 100%),url('images/sup-background.png');background-position:center,24% bottom;background-size:100% 100%,auto clamp(520px,65svh,680px);background-repeat:no-repeat}
+  #sup:before,#sup:after{content:none}
+  #sup .service-grid{min-height:calc(100svh - 104px);align-items:flex-start;justify-content:flex-end}
+  #sup .service-copy{width:88%;max-width:440px;margin:0 0 0 auto;transform:none;text-align:right}
+  #sup .service-copy>.kicker{justify-content:flex-end;font-size:clamp(10px,2.8vw,12px);line-height:1.4;color:#e8d8bd}
+  #sup .service-copy h2{font-size:clamp(34px,8.8vw,40px);line-height:1.02;margin:10px 0 12px;overflow-wrap:anywhere}
+  #sup .service-copy p{max-width:34ch;font-size:clamp(14px,3.8vw,15.5px);font-weight:700;line-height:1.5;color:#153850;margin:0 0 8px;transform:none;text-align:right;text-shadow:0 1px 2px rgba(232,216,189,.45);overflow-wrap:anywhere}
+  #sup .button{margin-top:10px}
+  /* Mobile compositions follow each cover image independently. */
+  #vika .vika-grid{padding-top:clamp(48px,6svh,58px)}
+  #vika .vika-copy{width:calc(100% - 36px);margin:0 18px}
+  #vika .vika-copy h1{max-width:12ch;font-size:clamp(36px,9.3vw,42px);line-height:.98;margin-bottom:8px}
+  #vika .vika-copy p{max-width:28ch;font-size:clamp(13px,3.4vw,14.5px);line-height:1.4}
+  .ride{background-position:center,26% bottom;background-size:100% 100%,auto 100svh}
+  .ride .service-grid{justify-content:flex-start}
+  .ride .service-copy{width:min(64%,420px);margin:0 0 0 auto;text-align:right}
+  .ride .service-copy>.kicker{justify-content:flex-end}
+  .ride .service-copy p{margin-left:auto}
+  #photo{background-position:center,68% bottom;background-size:100% 100%,auto 70svh}
+  #photo .service-grid{justify-content:flex-start}
+  #photo .service-copy{width:calc(100% - 36px);margin:0 18px}
+  #photo .service-copy p{max-width:34ch}
+  #sup{background-position:center,12% bottom;background-size:100% 100%,auto 100svh}
+  #sup .service-grid{justify-content:flex-start}
+  #sup .service-copy{width:min(58%,390px);margin:0 18px 0 auto;text-align:right}
+  #sup .service-copy p{margin-left:auto}
 }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
