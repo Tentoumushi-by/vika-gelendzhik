@@ -133,6 +133,16 @@
   #sup .service-grid{justify-content:flex-start}
   #sup .service-copy{width:min(58%,390px);margin:0 18px 0 auto;text-align:right}
   #sup .service-copy p{margin-left:auto}
+  /* Keep mobile section joins flush and remove the navy end caps. */
+  #vika,.ride,#photo,#sup{margin:0;border-bottom:0}
+  .ride:after,#photo:after{content:none}
+  /* Keep the photo cover visible behind the copy instead of leaving a navy top band. */
+  #photo{background-position:center,68% center;background-size:100% 100%,cover}
+  /* SUP copy sits in the open left side of the mobile composition. */
+  #sup .service-grid{justify-content:flex-start}
+  #sup .service-copy{width:calc(100% - 36px);max-width:440px;margin:0 18px;text-align:left}
+  #sup .service-copy>.kicker{justify-content:flex-start}
+  #sup .service-copy p{margin-left:0;text-align:left}
 }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
@@ -160,3 +170,4 @@
   </main>
 </body>
 </html>
+
