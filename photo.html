@@ -64,13 +64,56 @@
   .sup-page .page p{max-width:52ch;text-align:right}
 }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  </style>
+    .contacts-dialog{position:fixed;inset:0;width:min(460px,calc(100vw - 28px));max-width:none;max-height:calc(100dvh - 28px);margin:auto;padding:36px;border:1px solid rgba(183,155,89,.76);background:linear-gradient(145deg,#1b4760 0%,#153850 68%,#102e41 100%);color:#e8d8bd;box-shadow:0 24px 70px rgba(8,24,35,.48)}
+  .contacts-dialog::backdrop{background:rgba(8,24,35,.72);backdrop-filter:blur(3px)}
+  .contacts-dialog__heading{margin:0 0 8px;font-size:28px;line-height:1.1;color:#FFF7EA;text-align:center}
+  .contacts-dialog__intro{margin:0 0 22px;color:#e8d8bd;font-size:14px;line-height:1.5;text-align:center}
+  .contacts-dialog__close{position:absolute;top:12px;right:12px;width:36px;height:36px;border:1px solid rgba(183,155,89,.5);border-radius:50%;background:rgba(232,216,189,.06);color:#e8d8bd;font-size:24px;line-height:1;cursor:pointer}
+  .contacts-dialog__close:hover{background:rgba(183,155,89,.22)}
+  .contacts-dialog__list{display:grid;gap:10px;margin:0}
+  .contacts-dialog__row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);align-items:center;gap:12px;padding:12px;border:1px solid rgba(232,216,189,.15);border-radius:4px;background:rgba(232,216,189,.045)}
+  .contacts-dialog__icon{display:grid;width:38px;height:38px;place-items:center;border:1px solid rgba(183,155,89,.68);border-radius:50%;color:#B79B59;background:rgba(183,155,89,.08)}
+  .contacts-dialog__icon svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .contacts-dialog__icon .icon-fill{fill:currentColor;stroke:none}
+  .contacts-dialog__row dt{display:flex;align-items:center;gap:12px;font-weight:700;color:#e8d8bd}
+  .contacts-dialog__row dd{margin:0;color:#FFF7EA}
+  @media(max-width:760px){
+    .contacts-dialog{padding:28px 18px 20px}
+    .contacts-dialog__heading{padding-right:28px;font-size:24px;line-height:1.15}
+    .contacts-dialog__intro{margin-bottom:18px}
+    .contacts-dialog__close{top:10px;right:10px;display:grid;place-items:center;width:40px;height:40px;font-size:25px}
+    .contacts-dialog__list{gap:9px}
+    .contacts-dialog__row{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:8px;padding:10px}
+    .contacts-dialog__icon{flex:0 0 34px;width:34px;height:34px}
+    .contacts-dialog__icon svg{width:17px;height:17px}
+    .contacts-dialog__row dt{gap:8px;min-width:0;font-size:13px}
+    .contacts-dialog__row dd{min-width:0;font-size:13px;line-height:1.4;overflow-wrap:anywhere;text-align:right}
+  }</style>
 </head>
 <body>
   <header class="page-header"><a class="home-link" href="index.html">На главную</a></header>
-  <main class="page photo-page">
-    <section class="page-inner"><div class="page-copy"><div class="kicker">Съёмка с характером</div><h1>Фотосессия</h1><p><strong>Почувствуйте атмосферу скорости и стиля вместе с Honda CBR600FA!</strong><br>Спортивный мотоцикл с эффектной аэрографией станет ярким акцентом вашей фотосессии, видеосъёмки или личного контента.<br><br><strong>ДВА ВАРИАНТА СЪЁМКИ</strong><br><strong>1. Профессиональная съёмка</strong><br>Приглашайте своего фотографа — я доставлю мотоцикл в заранее согласованную локацию.<br><br><strong>2. Бюджетный вариант</strong><br>Помогу подобрать красивые места и самостоятельно сделаю для вас фото и видео на ваш телефон или камеру.<br><br><strong>ВАШИ ЭМОЦИИ — ВАШИ ВОСПОМИНАНИЯ</strong><br>Сделаем съёмку яркой, атмосферной и незабываемой, чтобы эти эмоции остались с вами надолго!<br><br>Бронирование даты осуществляется по предоплате.</p><a class="button" href="mailto:?subject=%D0%9C%D0%BE%D1%82%D0%BE%D1%81%D0%B5%D1%81%D1%81%D0%B8%D1%8F">Записаться на фотосессию</a></div></section>
-  </main>
-</body>
-</html>
+  <dialog class="contacts-dialog" id="contacts-dialog" aria-labelledby="contacts-dialog-title">
+    <button class="contacts-dialog__close" type="button" aria-label="Закрыть окно" data-close-dialog>×</button>
+    <h2 class="contacts-dialog__heading" id="contacts-dialog-title">Контакты</h2>
+    <p class="contacts-dialog__intro">Выберите удобный способ связи</p>
+    <dl class="contacts-dialog__list">
+      <div class="contacts-dialog__row"><dt><span class="contacts-dialog__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3.5H5.5A2 2 0 0 0 3.5 5.5 15 15 0 0 0 18.5 20.5a2 2 0 0 0 2-2V17l-4-1-1.5 2a12 12 0 0 1-8-8L9 8.5l-2-5Z"/></svg></span>Телефон</dt><dd>+7 (___) ___-__-__</dd></div>
+      <div class="contacts-dialog__row"><dt><span class="contacts-dialog__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m21 3-7.2 18-3.5-7.3L3 10.2 21 3Z"/><path d="m10.3 13.7 4.2-4.2"/></svg></span>Telegram</dt><dd>@username</dd></div>
+      <div class="contacts-dialog__row"><dt><span class="contacts-dialog__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="icon-fill" cx="17.5" cy="6.8" r=".9"/></svg></span>Instagram</dt><dd>@username</dd></div>
+      <div class="contacts-dialog__row"><dt><span class="contacts-dialog__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5.5 4.5h13A2.5 2.5 0 0 1 21 7v8.5a2.5 2.5 0 0 1-2.5 2.5h-7L6 21v-3h-.5A2.5 2.5 0 0 1 3 15.5V7a2.5 2.5 0 0 1 2.5-2.5Z"/><circle class="icon-fill" cx="8" cy="11.5" r=".8"/><circle class="icon-fill" cx="12" cy="11.5" r=".8"/><circle class="icon-fill" cx="16" cy="11.5" r=".8"/></svg></span>MAX</dt><dd>Ссылка будет добавлена</dd></div>
+    </dl>
+  </dialog>
 
+  <main class="page photo-page">
+    <section class="page-inner"><div class="page-copy"><div class="kicker">Съёмка с характером</div><h1>Фотосессия</h1><p><strong>Почувствуйте атмосферу скорости и стиля вместе с Honda CBR600FA!</strong><br>Спортивный мотоцикл с эффектной аэрографией станет ярким акцентом вашей фотосессии, видеосъёмки или личного контента.<br><br><strong>ДВА ВАРИАНТА СЪЁМКИ</strong><br><strong>1. Профессиональная съёмка</strong><br>Приглашайте своего фотографа — я доставлю мотоцикл в заранее согласованную локацию.<br><br><strong>2. Бюджетный вариант</strong><br>Помогу подобрать красивые места и самостоятельно сделаю для вас фото и видео на ваш телефон или камеру.<br><br><strong>ВАШИ ЭМОЦИИ — ВАШИ ВОСПОМИНАНИЯ</strong><br>Сделаем съёмку яркой, атмосферной и незабываемой, чтобы эти эмоции остались с вами надолго!<br><br>Бронирование даты осуществляется по предоплате.</p><a class="button" id="photo-booking-trigger" href="#contacts-dialog">Записаться на фотосессию</a></div></section>
+  </main>
+  <script>
+    const bookingTrigger=document.getElementById('photo-booking-trigger');
+    const contactsDialog=document.getElementById('contacts-dialog');
+    if(bookingTrigger&&contactsDialog){
+      bookingTrigger.addEventListener('click',event=>{event.preventDefault();contactsDialog.showModal()});
+      contactsDialog.querySelector('[data-close-dialog]').addEventListener('click',()=>contactsDialog.close());
+      contactsDialog.addEventListener('click',event=>{if(event.target===contactsDialog)contactsDialog.close()});
+    }
+  </script></body>
+</html>
