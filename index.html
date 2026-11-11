@@ -161,6 +161,10 @@
   #sup .button{display:flex;width:max-content;margin:12px auto 0}
   #sup:before{content:'';position:absolute;z-index:0;inset:0 0 auto;height:clamp(96px,13svh,120px);background:linear-gradient(180deg,rgba(21,56,80,.76) 0%,rgba(21,56,80,.56) 32%,rgba(21,56,80,.24) 72%,rgba(21,56,80,0) 100%);filter:none;opacity:1;pointer-events:none}
 }
+    @media(min-width:1201px){
+  #sup{border-top:0;border-bottom:0;background-color:#153850}
+  #sup:after{background-position:center top,center,right center;background-size:100% 140px,100% 100%,auto 100%}
+}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
