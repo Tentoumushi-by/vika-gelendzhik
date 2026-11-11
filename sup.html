@@ -58,9 +58,13 @@
   .photo-page .page-copy p{text-align:left}
   .photo-page .button{margin-left:auto;margin-right:auto}
   .sup-page{background-position:center,center,left center}
+  .sup-page{background-image:linear-gradient(0deg,rgba(21,56,80,.9),rgba(21,56,80,.18)),linear-gradient(90deg,transparent 20%,rgba(21,56,80,.4)),url('images/sup-page-background-mobile.jpg');background-position:center,center,center center;background-size:100% 100%,100% 100%,cover;background-repeat:no-repeat}
   .sup-page .page-inner{width:calc(100% - 40px);min-height:100svh;padding:82px 0 38px;justify-content:flex-end;align-items:center}
   .sup-page .page-copy{width:min(86%,520px);max-width:520px;margin:0 0 0 auto;transform:none;text-align:right}
   .sup-page .page p{max-width:52ch;text-align:right}
+}
+    @media(min-width:1201px){
+  .sup-page{background-image:linear-gradient(0deg,rgba(21,56,80,.9),rgba(21,56,80,.18)),linear-gradient(90deg,transparent 20%,rgba(21,56,80,.4)),url('images/sup-page-background-wide.jpg');background-position:center,center,center center;background-size:100% 100%,100% 100%,cover;background-repeat:no-repeat}
 }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
@@ -72,3 +76,4 @@
   </main>
 </body>
 </html>
+
