@@ -108,7 +108,47 @@
     .contacts-dialog__icon svg{width:17px;height:17px}
     .contacts-dialog__row dt{gap:8px;min-width:0;font-size:13px}
     .contacts-dialog__row dd{min-width:0;font-size:13px;line-height:1.4;overflow-wrap:anywhere;text-align:right}
-  }</style>
+  }@media(max-width:760px){
+  .sup-page .page-inner{width:calc(100% - 32px);padding:88px 0 30px;justify-content:flex-start;align-items:flex-start}
+  .sup-page .sup-copy--mobile{display:block;width:100%;max-width:700px;margin:0 auto;transform:none;text-align:left}
+  .sup-page .sup-copy--desktop{display:none}
+  .sup-page .sup-copy--mobile .kicker{display:flex;align-items:center;justify-content:center;gap:9px;margin:0 0 12px;color:#FFF7EA;text-align:center;font-size:11px;letter-spacing:.14em;text-shadow:0 2px 10px rgba(8,24,35,.9)}
+  .sup-page .sup-copy--mobile .kicker:before,.sup-page .sup-copy--mobile .kicker:after{content:"";display:block;width:24px;height:2px;flex:0 0 24px;background:#B79B59}
+  .sup-page .sup-copy--mobile h1{margin:0 0 12px;color:#FFF7EA;font-size:clamp(32px,8.8vw,44px);font-weight:700;line-height:1.02;letter-spacing:-.04em;text-align:left;text-shadow:0 3px 14px rgba(8,24,35,.9)}
+  .sup-page .sup-copy--mobile h1 span,.sup-page .sup-copy--mobile h1 em{display:block}
+  .sup-page .sup-copy--mobile h1 em{color:#efb82e;font-style:normal}
+  .sup-page .sup-mobile-intro{max-width:100%;margin:0 0 16px;color:#FFF7EA;font-size:15px;font-weight:500;line-height:1.45;text-align:left;text-shadow:0 2px 10px rgba(8,24,35,.92)}
+  .sup-page .sup-mobile-perks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:center;margin:0 0 16px;padding:9px 0;border-top:1px solid rgba(232,216,189,.28);border-bottom:1px solid rgba(232,216,189,.28);background:rgba(13,32,45,.48)}
+  .sup-page .sup-mobile-perk{min-width:0;min-height:46px;display:flex;align-items:center;justify-content:center;gap:6px;padding:2px 6px;color:#FFF7EA;font-size:10px;font-weight:600;line-height:1.2;text-align:left}
+  .sup-page .sup-mobile-perk+.sup-mobile-perk{border-left:1px solid #B79B59}
+  .sup-page .sup-mobile-perk svg{width:27px;height:27px;flex:0 0 27px;fill:none;stroke:#efb82e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .sup-page .sup-mobile-highlight{margin:0 0 12px;padding:9px 12px;border:1px solid #efb82e;border-radius:12px;background:rgba(13,32,45,.72);box-shadow:0 0 12px rgba(239,184,46,.38);color:#ffd15a;font-size:14px;font-weight:700;line-height:1.25;text-align:center;text-shadow:0 1px 5px rgba(8,24,35,.8)}
+  .sup-page .sup-copy--mobile .sup-price-note{max-width:100%;margin:0;padding:0;border:0;color:#FFF7EA;font-size:14px;font-weight:500;line-height:1.4;text-align:left;text-shadow:0 2px 10px rgba(8,24,35,.92)}
+}@media(min-width:761px){
+  .sup-page .page-inner{justify-content:flex-start;align-items:center}
+  .sup-page .sup-copy--mobile{display:none}
+  .sup-page .sup-copy--desktop{display:block;width:min(58vw,760px);max-width:760px;margin:0 auto 0 0;transform:none;text-align:left}
+  .sup-page .sup-copy--desktop .kicker{display:flex;align-items:center;justify-content:flex-start;gap:12px;margin:0 0 14px;color:#FFF7EA;font-size:13px;letter-spacing:.16em;text-shadow:0 2px 10px rgba(8,24,35,.9)}
+  .sup-page .sup-copy--desktop .kicker:before,.sup-page .sup-copy--desktop .kicker:after{content:"";display:block;width:38px;height:2px;flex:0 0 38px;background:#B79B59}
+  .sup-page .sup-copy--desktop h1{margin:0 0 16px;color:#FFF7EA;font-size:clamp(42px,4.5vw,68px);font-weight:700;line-height:.99;letter-spacing:-.04em;text-align:left;text-shadow:0 3px 16px rgba(8,24,35,.9)}
+  .sup-page .sup-copy--desktop h1 span,.sup-page .sup-copy--desktop h1 em{display:block}
+  .sup-page .sup-copy--desktop h1 em{color:#efb82e;font-style:normal}
+  .sup-page .sup-copy--desktop .sup-desktop-intro{max-width:64ch;margin:0 0 18px;color:#FFF7EA;font-size:clamp(16px,1.35vw,19px);font-weight:500;line-height:1.48;text-align:left;text-shadow:0 2px 12px rgba(8,24,35,.9)}
+  .sup-page .sup-desktop-perks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:center;margin:0 0 18px;padding:10px 0;border-top:1px solid rgba(232,216,189,.32);border-bottom:1px solid rgba(232,216,189,.32);background:rgba(13,32,45,.38)}
+  .sup-page .sup-desktop-perk{min-width:0;min-height:54px;display:flex;align-items:center;justify-content:center;gap:10px;padding:4px 10px;color:#FFF7EA;font-size:clamp(12px,1.1vw,16px);font-weight:600;line-height:1.25;text-align:left}
+  .sup-page .sup-desktop-perk+.sup-desktop-perk{border-left:1px solid #B79B59}
+  .sup-page .sup-desktop-perk svg{display:block;width:32px;height:32px;min-width:32px;max-width:32px;flex:0 0 32px;fill:none;stroke:#efb82e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .sup-page .sup-desktop-highlight{margin:0 0 13px;padding:10px 15px;border:1px solid #efb82e;border-radius:14px;background:rgba(13,32,45,.72);box-shadow:0 0 14px rgba(239,184,46,.36);color:#ffd15a;font-size:clamp(16px,1.5vw,22px);font-weight:700;line-height:1.25;text-align:center;text-shadow:0 1px 5px rgba(8,24,35,.8)}
+  .sup-page .sup-copy--desktop .sup-price-note{max-width:64ch;margin:0;color:#FFF7EA;font-size:clamp(15px,1.3vw,18px);font-weight:500;line-height:1.45;text-align:left;text-shadow:0 2px 12px rgba(8,24,35,.92)}
+  .sup-page .sup-copy--desktop .button{margin-top:20px}
+}
+@media(max-width:760px){
+  .sup-page .sup-mobile-perk svg{display:block;width:26px!important;height:26px!important;min-width:26px;max-width:26px;min-height:26px;max-height:26px;flex:0 0 26px}
+  .sup-page .sup-mobile-perk{justify-content:flex-start;overflow-wrap:anywhere}
+  .sup-page .sup-mobile-perk span{display:block;min-width:0;overflow-wrap:anywhere}
+  .sup-page .sup-desktop-perk svg{display:block;width:26px!important;height:26px!important;min-width:26px;max-width:26px;min-height:26px;max-height:26px;flex:0 0 26px}
+  .sup-page .sup-desktop-perk{justify-content:flex-start;overflow-wrap:anywhere}
+}</style>
 </head>
 <body>
   <header class="page-header"><a class="home-link" href="index.html">На главную</a></header>
@@ -125,7 +165,7 @@
   </dialog>
 
   <main class="page sup-page">
-    <section class="page-inner"><div class="page-copy sup-copy--mobile"><div class="kicker">Море с другого ракурса</div><h1>Твоё идеальное приключение начинается на море</h1><p>Открой для себя живописные бухты Геленджика, насладись красотой морских закатов и атмосферой свободы. Индивидуальные прогулки с обучением для новичков, фото и видео на память.</p><p><strong>Только ты, море и незабываемые впечатления.</strong></p><p class="sup-price-note">Стоимость обсуждается индивидуально и зависит от выбранного формата прогулки.</p><a class="button" data-contact-trigger href="#contacts-dialog">Записаться на прогулку</a></div><div class="page-copy sup-copy--desktop"><div class="kicker">Море с другого ракурса</div><h1>Твоё идеальное приключение начинается на море</h1><p>Открой для себя живописные бухты Геленджика, насладись красотой морских закатов и атмосферой свободы. Индивидуальные прогулки с обучением для новичков, фото и видео на память.</p><p><strong>Только ты, море и незабываемые впечатления.</strong></p><p class="sup-price-note">Стоимость обсуждается индивидуально и зависит от выбранного формата прогулки.</p><a class="button" data-contact-trigger href="#contacts-dialog">Записаться на прогулку</a></div></section>
+    <section class="page-inner"><div class="page-copy sup-copy--mobile"><div class="kicker">Море с другого ракурса</div><h1><span>Твоё идеальное</span><span>приключение</span><em>начинается на море</em></h1><p class="sup-mobile-intro">Открой для себя живописные бухты Геленджика, насладись красотой морских закатов и атмосферой свободы.</p><div class="sup-mobile-perks" aria-label="Что ждёт на прогулке"><div class="sup-mobile-perk"><svg width="28" height="28" aria-hidden="true" viewBox="0 0 48 40"><path d="M5 25h38l-5 9H13zM12 24l4-11h13l8 11M16 13l-4-6h9M29 15h8l6 9M9 25l-4-8M14 34l-2 4M37 34l3 4M20 25a6 6 0 1 1-12 0M41 25a6 6 0 1 1-12 0"/></svg><span>Индивидуальные<br>прогулки</span></div><div class="sup-mobile-perk"><svg width="28" height="28" aria-hidden="true" viewBox="0 0 48 40"><path d="m4 12 20-8 20 8-20 8zM12 16v12c7 6 17 6 24 0V16M44 13v14M42 29h4"/></svg><span>Обучение для<br>новичков</span></div><div class="sup-mobile-perk"><svg width="28" height="28" aria-hidden="true" viewBox="0 0 48 40"><path d="M7 12h8l4-5h11l4 5h7a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4zM24 17a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg><span>Фото и видео<br>на память</span></div></div><div class="sup-mobile-highlight">Только ты, море и незабываемые впечатления.</div><p class="sup-price-note">Стоимость обсуждается индивидуально и зависит от выбранного формата прогулки.</p><a class="button" data-contact-trigger href="#contacts-dialog">Записаться на прогулку</a></div><div class="page-copy sup-copy--desktop"><div class="kicker">Море с другого ракурса</div><h1><span>Твоё идеальное</span><span>приключение</span><em>начинается на море</em></h1><p class="sup-desktop-intro">Открой для себя живописные бухты Геленджика, насладись красотой морских закатов и атмосферой свободы.</p><div class="sup-desktop-perks" aria-label="Что ждёт на прогулке"><div class="sup-desktop-perk"><svg width="28" height="28" aria-hidden="true" viewBox="0 0 48 40"><path d="M5 25h38l-5 9H13zM12 24l4-11h13l8 11M16 13l-4-6h9M29 15h8l6 9M9 25l-4-8M14 34l-2 4M37 34l3 4M20 25a6 6 0 1 1-12 0M41 25a6 6 0 1 1-12 0"/></svg><span>Индивидуальные<br>прогулки</span></div><div class="sup-desktop-perk"><svg width="28" height="28" aria-hidden="true" viewBox="0 0 48 40"><path d="m4 12 20-8 20 8-20 8zM12 16v12c7 6 17 6 24 0V16M44 13v14M42 29h4"/></svg><span>Обучение для<br>новичков</span></div><div class="sup-desktop-perk"><svg width="28" height="28" aria-hidden="true" viewBox="0 0 48 40"><path d="M7 12h8l4-5h11l4 5h7a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4zM24 17a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg><span>Фото и видео<br>на память</span></div></div><div class="sup-desktop-highlight">Только ты, море и незабываемые впечатления.</div><p class="sup-price-note">Стоимость обсуждается индивидуально и зависит от выбранного формата прогулки.</p><a class="button" data-contact-trigger href="#contacts-dialog">Записаться на прогулку</a></div></section>
   </main>
   <script>
     const bookingTriggers=document.querySelectorAll('[data-contact-trigger]');
@@ -138,4 +178,3 @@
   </script>
 </body>
 </html>
-
