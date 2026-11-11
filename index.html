@@ -170,6 +170,12 @@
   #sup:before{content:none}
   #sup:after{background-image:linear-gradient(180deg,rgba(21,54,74,.42) 0%,rgba(21,54,74,.16) 58px,transparent 140px),linear-gradient(90deg,rgba(21,56,80,.04) 0%,rgba(21,56,80,.08) 42%,rgba(21,56,80,.34) 69%,rgba(21,56,80,.58) 100%),url('images/sup-background-wide.png');background-position:center top,center,center center;background-size:100% 140px,100% 100%,cover;background-repeat:no-repeat;-webkit-mask-image:none;mask-image:none}
 }
+    @media(min-width:1201px){
+  #sup .service-grid{justify-content:flex-start}
+  #sup .service-copy{margin-left:0;margin-right:0;transform:none;text-align:left}
+  #sup .service-copy>.kicker{justify-content:flex-start}
+  #sup .service-copy p{transform:none;text-align:left}
+}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
