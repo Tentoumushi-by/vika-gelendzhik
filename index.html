@@ -169,6 +169,16 @@
   #sup{border-top:0;border-bottom:0;background-color:#153850}
   #sup:before{content:none}
   #sup:after{background-image:linear-gradient(180deg,rgba(21,54,74,.42) 0%,rgba(21,54,74,.16) 58px,transparent 140px),linear-gradient(90deg,rgba(21,56,80,.04) 0%,rgba(21,56,80,.08) 42%,rgba(21,56,80,.34) 69%,rgba(21,56,80,.58) 100%),url('images/sup-background-wide.png');background-position:center top,center,center center;background-size:100% 140px,100% 100%,cover;background-repeat:no-repeat;-webkit-mask-image:none;mask-image:none}
+  #sup .service-copy p{color:#FFF7EA;text-shadow:0 1px 5px rgba(8,24,35,.78)}
+  .contacts-dialog{width:min(440px,calc(100vw - 48px));max-width:none;padding:32px;border:1px solid rgba(183,155,89,.72);background:#e8d8bd;color:#153850;box-shadow:0 24px 70px rgba(8,24,35,.35)}
+  .contacts-dialog::backdrop{background:rgba(8,24,35,.68);backdrop-filter:blur(3px)}
+  .contacts-dialog__heading{margin:0 0 8px;font-size:28px;line-height:1.1;color:#153850}
+  .contacts-dialog__intro{margin:0 0 22px;color:#455b67;font-size:14px;line-height:1.5}
+  .contacts-dialog__close{position:absolute;top:14px;right:14px;width:36px;height:36px;border:0;background:transparent;color:#153850;font-size:24px;cursor:pointer}
+  .contacts-dialog__list{display:grid;gap:12px;margin:0}
+  .contacts-dialog__row{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:12px 0;border-top:1px solid rgba(21,56,80,.16)}
+  .contacts-dialog__row dt{font-weight:700;color:#153850}
+  .contacts-dialog__row dd{margin:0;color:#475b65}
 }
     @media(min-width:1201px){
   #sup .service-grid{justify-content:flex-start}
@@ -181,8 +191,19 @@
 </head>
 <body>
   <header class="topbar">
-    <nav class="nav" aria-label="Навигация"><a class="services" href="#ride">Услуги</a><a class="contact" href="mailto:?subject=%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85">Контакты</a></nav>
+    <nav class="nav" aria-label="Навигация"><a class="services" href="#ride">Услуги</a><a class="contact" id="contact-trigger" href="mailto:?subject=%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85">Контакты</a></nav>
   </header>
+  <dialog class="contacts-dialog" id="contacts-dialog" aria-labelledby="contacts-dialog-title">
+    <button class="contacts-dialog__close" type="button" aria-label="Закрыть окно" data-close-dialog>×</button>
+    <h2 class="contacts-dialog__heading" id="contacts-dialog-title">Контакты</h2>
+    <p class="contacts-dialog__intro">Выберите удобный способ связи</p>
+    <dl class="contacts-dialog__list">
+      <div class="contacts-dialog__row"><dt>Телефон</dt><dd>+7 (___) ___-__-__</dd></div>
+      <div class="contacts-dialog__row"><dt>Telegram</dt><dd>@username</dd></div>
+      <div class="contacts-dialog__row"><dt>Instagram</dt><dd>@username</dd></div>
+      <div class="contacts-dialog__row"><dt>MAX</dt><dd>Ссылка будет добавлена</dd></div>
+    </dl>
+  </dialog>
   <main>
     <section class="block" id="vika">
       <div class="block-inner vika-grid">
@@ -200,6 +221,17 @@
       <div class="block-inner service-grid"><div class="service-art"><span class="art-index">03 — WATER</span><span class="art-word">На волне</span></div><div class="service-copy"><div class="kicker">Море с другого ракурса</div><h2>SUP прогулки</h2><p>SUP прогулка по морю — отличная возможность посмотреть на Геленджик с воды, увидеть знакомые места по-новому и спокойно отдохнуть на воде</p><a class="button" href="sup.html">Узнать про SUP</a></div></div><span class="number">04 / 04</span>
     </section>
   </main>
+  <script>
+    const contactsDialog=document.getElementById('contacts-dialog');
+    const contactTrigger=document.getElementById('contact-trigger');
+    if(contactsDialog&&contactTrigger){
+      contactTrigger.addEventListener('click',event=>{
+        if(window.matchMedia('(min-width:1201px)').matches){event.preventDefault();contactsDialog.showModal()}
+      });
+      contactsDialog.querySelector('[data-close-dialog]').addEventListener('click',()=>contactsDialog.close());
+      contactsDialog.addEventListener('click',event=>{if(event.target===contactsDialog)contactsDialog.close()});
+    }
+  </script>
 </body>
 </html>
 
